@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Local Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏺 Local Shopping</div>
+        <nav>
+            <a href="index.html">Vitrine</a>
+            <a href="lojas.html">Meus Produtos (Lojista)</a>
+        </nav>
+    </header>
+    <main class="form-container">
+        <div class="card-form">
+            <h2>Cadastro de Artesão/Lojista</h2>
+            <form id="cadastroForm">
+                <label>Nome completo</label>
+                <input type="text" id="cadNome" required>
+                <label>E-mail</label>
+                <input type="email" id="cadEmail" required>
+                <label>Senha</label>
+                <input type="password" id="cadSenha" required>
+                <label>Tempo de experiência (anos)</label>
+                <input type="number" id="cadExperiencia" required>
+                <label>Local de produção (cidade/UF)</label>
+                <input type="text" id="cadLocal" required>
+                <label>WhatsApp (com DDD, apenas números)</label>
+                <input type="tel" id="cadWhatsapp" required>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+    <script src="js/shared/storage.js"></script>
+    <script src="js/shared/auth.js"></script>
+    <script src="js/pages/cadastro.js"></script>
+</body>
+</html>
