@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Shopping - Vitrine de Artesãos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏺 Local Shopping</div>
+        <nav>
+            <a href="index.html">Vitrine</a>
+            <a href="lojas.html">Meus Produtos (Lojista)</a>
+            <a href="login.html" id="loginLink">Entrar</a>
+            <span id="userGreeting" style="display:none;"></span>
+            <button id="logoutBtn" style="display:none;" class="btn-outline">Sair</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Descubra o feito à mão</h1>
+            <p>Conectamos você a artesãos de verdade</p>
+        </section>
+
+        <section class="filtros">
+            <h2>Filtrar artesãos</h2>
+            <div class="filtro-grid">
+                <input type="text" id="filterNome" placeholder="Nome do artesão">
+                <select id="filterExperiencia">
+                    <option value="">Experiência (anos)</option>
+                    <option value="0-2">0-2 anos</option>
+                    <option value="3-5">3-5 anos</option>
+                    <option value="6+">6+ anos</option>
+                </select>
+                <select id="filterLocal">
+                    <option value="">Local de produção</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="BA">Bahia</option>
+                </select>
+                <button id="aplicarFiltros" class="btn-primary">Aplicar filtros</button>
+            </div>
+        </section>
+
+        <section class="artesaos-vitrine">
+            <h2>Nossos artesãos</h2>
+            <div id="artesaosContainer" class="cards-container"></div>
+        </section>
+    </main>
+
+    <div id="toastNotification" class="toast"></div>
+
+    <script src="js/shared/storage.js"></script>
+    <script src="js/shared/auth.js"></script>
+    <script src="js/pages/home.js"></script>
+</body>
+</html>
